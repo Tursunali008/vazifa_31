@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:workplace/homepage.dart';
+import 'package:task_manager/screen/screen_1.dart';
 
 void main() {
-  runApp(const Workplace());
+  runApp(const MyApp());
 }
 
-class Workplace extends StatelessWidget {
-  const Workplace({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const Screen1(),
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
     );
   }
 }
